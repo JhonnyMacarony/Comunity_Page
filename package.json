@@ -1,19 +1,26 @@
 {
-  "name": "hhhhh",
+  "name": "comunity-website",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "directories": {
-    "example": "examples"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
+  "main": "server.js",
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.1"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JhonnyMacarony/Comunity_Page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JhonnyMacarony/Comunity_Page/issues"
+  },
+  "homepage": "https://github.com/JhonnyMacarony/Comunity_Page#readme"
 }
