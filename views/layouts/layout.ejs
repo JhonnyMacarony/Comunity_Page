@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <title>Community page</title>
@@ -17,6 +17,7 @@
             color: rgb(241, 239, 239);
         }
         body{
+            position: relative;
             background: linear-gradient(315deg, #37d5d6 0%, #420c85 74%);
             background-repeat: no-repeat;
         }
@@ -192,6 +193,14 @@
         }
         ::-webkit-scrollbar-thumb:hover {
             background: #555; 
+        }
+        @media (max-width: 600px) {
+            body{
+                background: #420c85;
+            }
+            .end{
+                width: 114vh;
+            }
         }
     </style>
 </head>
