@@ -14,20 +14,44 @@
             padding: 0;
             color: rgb(241, 239, 239);
         }
-        body{
-            background: linear-gradient(315deg, #37d5d6 0%, #420c85 74%);
-            background-repeat: no-repeat;
-        }
+        .body{
+            background-color: #130f40;
+            background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);        }
         .head{
             position: relative;
             font-family: 'Gelasio', serif;
             font-family: 'Montserrat', sans-serif;
             font-family: 'Poppins', sans-serif;
         }
+        .header{
+            background-image: url("/1091f7113bc07eca44fc4633fc86f797.jpg");
+            padding-bottom: 10px;
+            background-size: cover;
+            background-position: center;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            height: 250px;
+            z-index: 1111111;
+        }
+        .header::before {
+            margin-top: 170px;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, #000000, transparent);
+            z-index: 1000;
+        }
+        @media (max-height: 100px){
+            .header{
+                height: 100px;
+            }
+        }
         .title{
             padding-top: 10px;
             margin-left: 650px;
-            padding-bottom: 10px;
+            padding-bottom: 40px;
             font-weight: bold;
         }
         .parent{
