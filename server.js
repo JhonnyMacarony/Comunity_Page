@@ -27,6 +27,7 @@ app.get("/contact", (req, res) =>{
 app.set("view engine", "ejs")
 app.set("views", __dirname + '/views')
 app.set('layout', 'layouts/event')
+app.use( express.static( "public" ) );
 app.use(expressLayouts)
 app.use(express.static('public'))
 
