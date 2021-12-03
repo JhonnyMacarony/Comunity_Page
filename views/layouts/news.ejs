@@ -177,6 +177,7 @@
             margin-bottom: 20px;
         }
         .end{
+            height: auto;
             background-color: rgba(51, 51, 51, 0.507);
             padding-bottom: 20px;
             padding-top: 10px;
@@ -241,7 +242,7 @@
             margin-top: 35px;
             margin-bottom: 20px;
             border: 4px solid white;
-            width: 150px;
+            width: 250px;
             border-radius: 10px;
             font-size: 40px;
             background-color: transparent;
@@ -305,7 +306,7 @@
             height: 30px;
             font-size: 20px;
             position: absolute;
-            margin-left: 200px;
+            margin-left: 299px;
             margin-top: 55px;
             background-color: transparent;
             border: none;
@@ -464,7 +465,6 @@
         <a href="/news"><div class="news icons" id="news-page-btn"><i class="far fa-newspaper"></i></div></a>
         <a href="/event"><div class="event icons" id="event-page-btn"><i class="far fa-calendar-alt"></i></div></a>
         <a href="/contact"><div class="contact icons" id="contact-page-btn"><i class="far fa-comments"></i></div></a>
-        <a href="/settings"><div class="settings icons" id="settings-page-btn"><i class="fas fa-cog"></i></div></a>
     </div>
     <div class="parent" id="home">
         <div class="normal-position-arrow" id="slide-arrow">►</div>
@@ -474,155 +474,39 @@
             <div class="news icons" id="news-page"><i class="far fa-newspaper"></i></div>
             <div class="event icons" id="event-page"><i class="far fa-calendar-alt"></i></div>
             <div class="contact icons" id="contact-page"><i class="far fa-comments"></i></div>
-            <div class="settings icons" id="settings-page"><i class="fas fa-cog"></i></div>
         </div>
         <header class="header">
             <div class="title">
                 <h1 class="head head-custom">Community Page</h1>
             </div>
             <div class="title-description">
-                <p class="decription-text">Community Page news</p>
+                <p class="decription-text">Community Page - News : is a section where you can see the current news and the past news</p>
             </div>
         </header>
         <div class="body">
             <div class="news">
-                <p><button type="button" id="arrow-btn-news" class="arrow-button-news invisible arrow" >▼</button></p>
-                <h1 class="head move"><button class="news-btn" id="news-button" type="button">News </button></h1> 
-                <div id="news-description" class="news-description">
-                    <p class="news-subtitle">Today we added today:</p>
+                <p><button type="button" id="arrow-btn-news" class="arrow-button-news  arrow" >▼</button></p>
+                <h1 class="head move"><button class="news-btn" id="news-button" type="button">Past news</button></h1> 
+                <div id="news-description" class="news-description invisible">
+                    <p class="news-subtitle">11/30/2021:</p>
                     <p class="subtitle-text">
-                        • a new motivation image and video<br>
-                        • a new channel
+                        + mobile version
+                        + click on "events", "program", etc => the content will disappear and an arrow will pop up from the title
+                        + design improvement
                     </p>    
                 </div>
             </div>
             <div class="events">
                 <p><button type="button" id="arrow-btn-events" class="arrow-button-events invisible arrow" >▼</button></p>
-                <h1 class="head move"><button class="event-btn" id="event-button" type="button">Events</button></h1>
+                <h1 class="head move"><button class="event-btn" id="event-button" type="button">News</button></h1>
                 <div id="event-description" class="news-description">
-                    <p class="news-subtitle">Next Sunday we will: </p>
+                    <p class="news-subtitle">12/3/2021: </p>
                     <p class="subtitle-text">
-                        • play some games<br>
-                        • know each other better
+                        + slide bar<br>
+                        + new categories<br>
+                        + design improvement
                     </p>
                 </div>
-            </div>
-            <div class="program">
-                <p><button type="button" id="arrow-btn-program" class="arrow-button-program invisible arrow" >▼</button></p>
-                <h1 class="head move"><button class="program-btn" id="program-button" type="button">Program</button></h1>
-                <div id="program-description" class="description-program">
-                    <div class="news-description">
-                        <p class="news-subtitle">The program of this week is:</p>
-                    </div>
-                    <table class="subtitle-text">
-                        <tr>
-                            <th>Monday</th>
-                            <th>Tuesday</th>
-                            <th>Wednesday</th>
-                            <th>Thursday</th>
-                            <th>Friday</th>
-                            <th>Saturday</th>
-                            <th>Sunday</th>
-                        </tr>
-                        <tr>
-                            <td>Wake up at 5 AM</td>
-                            <td>Wake up at 5 AM</td>
-                            <td>Wake up at 5 AM</td>
-                            <td>Wake up at 5 AM</td>
-                            <td>Wake up at 5 AM</td>
-                            <td>Wake up at 6 AM</td>
-                            <td>Wake up at 6:30 AM</td>
-                        </tr>
-                        <tr>
-                            <td>Take a shower at 5:30 AM</td>
-                            <td>Take a shower at 5:30 AM</td>
-                            <td>Take a shower at 5:30 AM</td>
-                            <td>Take a shower at 5:30 AM</td>
-                            <td>Take a shower at 5:30 AM</td>
-                            <td>Take a shower at 6:30 AM</td>
-                            <td>Take a shower at 7 AM</td>
-                        </tr>
-                        <tr>
-                            <td>Eat at 6 AM</td>
-                            <td>Eat at 6 AM</td>
-                            <td>Eat at 6 AM</td>
-                            <td>Eat at 6 AM</td>
-                            <td>Eat at 6 AM</td>
-                            <td>Eat at 7 AM</td>
-                            <td>Eat at 8 AM</td>
-                        </tr>
-                        <tr>
-                            <td>From 6 to 7 you can learn or you can read<br> a book or anything that helps you</td>
-                            <td>From 6 to 7 you can learn or you can read<br> a book or anything that helps you</td>
-                            <td>From 6 to 7 you can learn or you can read<br> a book or anything that helps you</td>
-                            <td>From 6 to 7 you can learn or you can read<br> a book or anything that helps you</td>
-                            <td>From 6 to 7 you can learn or you can read<br> a book or anything that helps you</td>
-                            <td>From 7 to 8 you can learn or you can read<br> a book or anything that helps you</td>
-                            <td>From 8 you can learn or you can read<br> a book or anything that helps you</td>
-                        </tr>
-                        <tr>
-                            <td>At 7:30 AM - 8 AM go to school</td>
-                            <td>At 7:30 AM - 8 AM go to school</td>
-                            <td>At 7:30 AM - 8 AM go to school</td>
-                            <td>At 7:30 AM - 8 AM go to school</td>
-                            <td>At 7:30 AM - 8 AM go to school</td>
-                            <td>At 8:30 AM - 8 AM go running outside and do some exercises</td>
-                            <td>At 9 - 10 AM go running outside and do some exercises</td>
-                        </tr>
-                        <tr>
-                            <td>When you finish classes go home and do your homework</td>
-                            <td>When you finish classes go home and do your homework</td>
-                            <td>When you finish classes go home and do your homework</td>
-                            <td>When you finish classes go home and do your homework</td>
-                            <td>When you finish classes go home and do your homework</td>
-                            <td>When you're done running, go home and go to Discord on our server<br> to see what we're doing</td>
-                            <td>When you're done running, go home and go to Discord on our server<br> to see what we're doing</td>
-                        </tr>
-                        <tr>
-                            <td>Relax at least 25 minutes</td>
-                            <td>Relax at least 25 minutes</td>
-                            <td>Relax at least 25 minutes</td>
-                            <td>Relax at least 25 minutes</td>
-                            <td>Relax at least 25 minutes</td>
-                            <td>Relax at least 50 minutes</td>
-                            <td>Relax at least 1 hour</td>
-                        </tr>
-                        <tr>
-                            <td>When you finish your homework, you can continue learning <br> and go on discord on our server </td>
-                            <td>When you finish your homework, you can continue learning <br> and go on discord on our server </td>
-                            <td>When you finish your homework, you can continue learning <br> and go on discord on our server </td>
-                            <td>When you finish your homework, you can continue learning <br> and go on discord on our server </td>
-                            <td>When you finish your homework, you can continue learning <br> and go on discord on our server </td>
-                            <td>When you relaxing, you can continue learning <br> and go on discord on our server or do anything you want</td>
-                            <td>When you relaxing, you can continue learning <br> and go on discord on our server or do anything you want</td>
-                        </tr>
-                        <tr>
-                            <td>Go to bed at least 9:30 - 10</td>
-                            <td>Go to bed at least 9:30 - 10</td>
-                            <td>Go to bed at least 9:30 - 10</td>
-                            <td>Go to bed at least 9:30 - 10</td>
-                            <td>Go to bed at least 9:30 - 10</td>
-                            <td>Go to bed at least 10:30 - 11</td>
-                            <td>Go to bed at least 9:30 - 10</td>
-                        </tr>
-                    </table>
-                    <div class="tabel-description">
-                        <p class="description-text">
-                            This table is not mandatory but would be recommended<br>
-                            On Sunday you can do whatever you want. 
-                        </p>
-                </div>
-            </div>
-            <div class="ocupations">
-                <p><button type="button" id="arrow-btn-occupation" class="arrow-button-occupation invisible arrow" >▼</button></p>
-                <h1 class="head move"><button class="occupation-btn" id="occupation-button" type="button">What do we do</button></h1>
-                <p id="occupations-description" class="ocupations-description">
-                    We can teach you about investing, crypto, how to start a business.<br>
-                    We will help each other with your business idea.<br>
-                    Join our discord to to see what else we do.
-                </p>
-            </div>
-        </div>
         <div class="end">
             <h1 class="head end-head">Also visit</h1>
             <div class="end-elements">
@@ -687,17 +571,6 @@
     arrowDownNews.addEventListener("click", ()=>{
         newsDescription.classList.remove("invisible")
         arrowDownNews.classList.add("invisible")
-    })
-
-    //Event stuff:
-    btnEvent.addEventListener("click", ()=>{
-        eventDescription.classList.add("invisible")
-        arrowDownEvents.classList.remove("invisible")
-    })
-
-    arrowDownEvents.addEventListener("click", ()=>{
-        eventDescription.classList.remove("invisible")
-        arrowDownEvents.classList.add("invisible")
     })
 
     //Program stuff:

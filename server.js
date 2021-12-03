@@ -24,10 +24,6 @@ app.get("/contact", (req, res) =>{
     res.render("layouts/contact.ejs")
 })
 
-app.get("/settings", (req, res) =>{
-    res.render("layouts/settings.ejs")
-})
-
 app.set("view engine", "ejs")
 app.set("views", __dirname + '/views')
 app.set('layout', 'layouts/event')
