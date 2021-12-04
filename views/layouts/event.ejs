@@ -51,11 +51,6 @@
             height: 100px;
             background: linear-gradient(to bottom, #000000, transparent);
         }
-        @media (max-height: 100px){
-            .header{
-                height: 100px;
-            }
-        }
         .title{
             padding-top: 10px;
             margin-left: 650px;
@@ -220,11 +215,16 @@
             background: #555; 
         }
         @media (max-width: 600px) {
-            body{
-                background-color: #050036  ;
+            .body{
+                background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);      
+                background-repeat: no-repeat;
+                width: 280vw;
+            }
+            .header{
+                width: 280vw;
             }
             .end{
-                width: 170vh;
+                width: 186vh;
             }
             .title{
                 width: 400px;
