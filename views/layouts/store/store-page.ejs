@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            color: rgb(241, 239, 239);
+        }
+        body{
+            background-color: rgb(82, 82, 82);
+        }
+        .header{
+            background-image: url("/images/—Pngtree—shopping cart_5398372.png");
+            background-color: rgb(100, 98, 98);
+            padding-bottom: 10px;
+            background-size: 300px;
+            background-position: center;
+            height: 250px;
+            z-index: 9;
+        }
+        .title{
+            padding-top: 10px;
+            margin-left: 650px;
+            padding-bottom: 40px;
+            font-weight: bold;
+        }
+        .head{
+            position: relative;
+            font-family: 'Gelasio', serif;
+            font-family: 'Montserrat', sans-serif;
+            font-family: 'Poppins', sans-serif;
+        }
+        .title-description{
+            margin-left: 10px;
+            margin-bottom: 20px;
+            font-family: 'Gelasio', serif;
+            font-family: 'Montserrat', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .back-arrow{
+            font-size: 27px;
+            font-weight: bold;
+            position: absolute;
+            margin-left: -640px;
+            padding: 10px;
+            margin-top: -29px;
+        }
+        .back-arrow:hover{
+            color: rgb(112, 112, 112);
+        }
+        .snacks-image{
+            height: 200px;
+        }
+        .snacks{
+            display: flex;
+            flex-direction: column;
+            border: 4px black solid;
+            height: auto;
+            width: auto;
+            margin-left: 25px;
+            align-items: center;
+            justify-content: center;
+        }
+        .categories{
+            display: flex;
+            justify-content: space-around;
+        }
+        .snacks-description{
+            padding: 10px 5px 10px 5px;
+            display: flex;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.534);
+            width: 263px;
+            position: absolute;
+            margin-top: 170px;
+        }
+        .snacks:hover{
+            border: 4px rgb(46, 46, 46) solid;
+        }
+        .snacks-description:hover{
+            padding-top: 15px;
+            margin-bottom: 10px;
+            background-color: rgba(0, 0, 0, 0.637);
+        }
+        .candies{
+            display: flex;
+            flex-direction: column;
+            border: 4px black solid;
+            height: auto;
+            width: auto;
+            margin-right: 25px;
+            align-items: center;
+            justify-content: center;
+        }
+        .candies-image{
+            height: 200px;
+        }
+        .candies-description{
+            padding: 10px 5px 10px 5px;
+            display: flex;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.534);
+            width: 265px;
+            position: absolute;
+            margin-top: 170px;
+        }
+        .candies-description:hover{
+            padding-top: 15px;
+            margin-bottom: 10px;
+            background-color: rgba(0, 0, 0, 0.637);
+        }
+        .candies:hover{
+            border: 4px rgb(46, 46, 46) solid;
+        }
+        ::-webkit-scrollbar {
+            width: 15px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgb(37, 37, 37); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333; 
+            border-radius: 25px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="title">
+            <h1 class="head head-custom">Community Store</h1>
+            <a href="/"><div class="back-arrow">&#x2B05</div></a>
+        </div>
+        <div class="title-description">
+            <p class="decription-text">Community Store is a place where you can order great stuff from us.</p>
+            <p class="decription-text">We are delivering just in USA and Romania</p>
+        </div>
+    </header>
+    <div class="products">
+        <h1 class="title">Select a category</h1>
+        <div class="categories">
+            <a href="/store/snacks"><div class="snacks">
+                <img class="snacks-image" src="/images/snacks-in-america.jpg">
+                <p class="snacks-description">A category full of snacks</p>
+            </div></a>
+            <a href="/store/candies"><div class="candies">
+                <img class="candies-image" src="/images/candy+IMG_5872.jpg">
+                <p class="candies-description">A category full of candies</p>
+            </div></a>    
+        </div>
+    </div>
+</body>
+</html>
