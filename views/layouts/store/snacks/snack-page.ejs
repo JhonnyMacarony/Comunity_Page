@@ -9,12 +9,12 @@
         *{
             margin: 0;
             padding: 0;
-            color: white;
         }
         body{
             background-color: rgb(82, 82, 82);
         }
         .header{
+            color: white;
             background-image: url("/images/snacks-in-america.jpg");
             background-color: rgb(100, 98, 98);
             padding-bottom: 10px;
@@ -23,18 +23,21 @@
             z-index: 9;
         }
         .title{
+            color: white;
             padding-top: 30px;
             margin-left: 650px;
             padding-bottom: 40px;
             font-weight: bold;
         }
         .head{
+            color: white;
             position: relative;
             font-family: 'Gelasio', serif;
             font-family: 'Montserrat', sans-serif;
             font-family: 'Poppins', sans-serif;
         }
         .title-description{
+            color: white;
             margin-left: 10px;
             margin-bottom: 20px;
             font-family: 'Gelasio', serif;
@@ -59,6 +62,9 @@
             height: 200px;
         }
         .takis{
+            overflow: hidden;
+            background-color: white;
+            color: white;
             display: flex;
             flex-direction: column;
             border: 4px black solid;
@@ -69,47 +75,13 @@
             justify-content: center;
         }
         .products{
+            color: white;
             display: flex;
             justify-content: space-around;
             margin-bottom: 20px;
         }
         .takis-description{
-            padding: 10px 5px 10px 5px;
-            display: flex;
-            text-decoration: none;
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(0, 0, 0, 0.534);
-            width: 198px;
-            position: absolute;
-            margin-top: 170px;
-            margin-bottom: 46px;
-        }
-        .takis:hover{
-            border: 4px rgb(46, 46, 46) solid;
-        }
-        .btn-buy{
-            background-color: green;
-            border: none;
-            padding: 10px;
-            font-size: 15px;
-            font-weight: bold;
-            margin-left: 35px;
-            cursor: pointer;
-            width: 100px;
-        }
-        .btn-buy:hover{
-            background-color: rgb(0, 104, 0);
-        }
-        .price-section{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .price{
-            margin-left: 29px;
-        }
-        .crisps-description{
+            color: white;
             padding: 10px 5px 10px 5px;
             display: flex;
             text-decoration: none;
@@ -119,20 +91,68 @@
             width: 240px;
             position: absolute;
             margin-top: 170px;
-            margin-bottom: 46px;
+            margin-bottom: 63px;
         }
-        .price-crisps{
-            margin-left: 46px;
+        .takis:hover{
+            border: 4px rgb(46, 46, 46) solid;
         }
-        .btn-buy-crisps{
+        .btn-buy{
+            color: white;
             background-color: green;
             border: none;
             padding: 10px;
             font-size: 15px;
             font-weight: bold;
-            margin-left: 60px;
+            margin-left: 29px;
             cursor: pointer;
-            width: 100px;
+            width: 150px;
+            height: 55px;
+        }
+        .btn-buy:hover{
+            background-color: rgb(0, 104, 0);
+        }
+        .price-section{
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .price{
+            color: black;
+            margin-left: 23px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+        .crisps-description{
+            color: white;
+            padding: 10px 5px 10px 5px;
+            display: flex;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.534);
+            width: 237px;
+            position: absolute;
+            margin-top: 170px;
+            margin-bottom: 63px;
+        }
+        .price-crisps{
+            color: black;
+            margin-left: 23px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+        .btn-buy-crisps{
+            color: white;
+            background-color: green;
+            border: none;
+            padding: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            margin-left: 29px;
+            cursor: pointer;
+            width: 150px;
+            height: 55px;
         }
         .btn-buy-crisps:hover{
             background-color: rgb(0, 104, 0);
@@ -164,6 +184,164 @@
             .products{
                 margin-left: 620px;
             }
+            .back-arrow{
+            font-size: 27px;
+            font-weight: bold;
+            position: absolute;
+            margin-left: -340px;
+            padding: 10px;
+            margin-top: -26px;
+        }
+        }
+        .container {
+            color: white;
+            max-width: 1700px;
+            margin: 0 auto;
+            padding: 0 1.5em;
+            margin-top: 140px;
+            padding-bottom: 30px;
+            background-color: rgba(0, 0, 0, 0.24);
+        }
+        .main-footer-container {
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        .main-footer-container ul {
+            color: white;
+            flex-grow: 1;
+            text-align: end;
+        }
+        .section-header {
+            margin-bottom: 20px;
+            font-family: "Metal Mania";
+            font-weight: normal;
+            color: white;
+            text-align: center;
+            font-size: 2.5em;
+        }
+        .cart-row {
+            display: flex;
+        }
+        .cart-row:last-child {
+            border-bottom: 1px solid black;
+        }
+        .cart-row:last-child .cart-column {
+            border: none;
+        }
+        .cart-item {
+            width: 45%;
+        }
+        .cart-item-title {
+            color: rgb(255, 255, 255);
+            margin-left: .5em;
+            font-size: 1.2em;
+        }
+        .cart-item-image {
+            width: 75px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .cart-column {
+            color: white;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid black;
+            margin-right: 1.5em;
+            padding-bottom: 10px;
+            margin-top: 10px;
+        }
+        .cart-row:last-child .cart-column {
+            border: none;
+        }
+        .cart-price {
+            width: 20%;
+            font-size: 1.2em;
+            color: rgb(255, 255, 255);
+        }
+        .cart-quantity {
+            width: 100px;
+            background-color: transparent;
+        }
+        .cart-header {
+            font-weight: bold;
+            font-size: 1.25em;
+            color: rgb(255, 255, 255);
+        }
+        .cart-total {
+            color: white;
+            text-align: end;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+        .cart-total-title {
+            font-weight: bold;
+            font-size: 1.5em;
+            color: rgb(255, 255, 255);
+            margin-right: 20px;
+        }
+        .cart-total-price {
+            color: rgb(255, 255, 255);
+            font-size: 1.1em;
+        }
+        .btn-danger {
+            color: white;
+            background-color: #EB5757;
+            border: none;
+            border-radius: .3em;
+            font-weight: bold;
+            margin-left: 35px;
+        }
+        .btn-danger:hover {
+            background-color: #CC4C4C;
+        }
+        .tour-btn {
+            max-width: 19%;
+        }
+        .btn {
+            text-align: center;
+            vertical-align: middle;
+            padding: .67em .67em;
+            cursor: pointer;
+        }
+
+        .btn-header {
+            margin: .5em 15% 2em 15%;
+            color: white;
+            border: 2px solid #2D9CDB;
+            background-color: rgba(255, 255, 255, .1);
+            border-radius: 0;
+            font-size: 1.5em;
+            font-weight: lighter;
+            padding-left: 2em;
+            padding-right: 2em;
+        }
+
+        .btn-header:hover {
+            background-color: rgba(255, 255, 255, .3);
+        }
+
+        .btn-primary {
+            color: white;
+            background-color: green;
+            border: none;
+            font-weight: bold;
+        }
+
+        .btn-primary:hover {
+            background-color: rgb(0, 104, 0);
+        }
+        .btn-buy-pringles{
+            color: white;
+            background-color: green;
+            border: none;
+            padding: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            margin-left: 29px;
+            cursor: pointer;
+            width: 153px;
+            height: 55px;
         }
     </style>            
 </head>
@@ -179,90 +357,214 @@
     </header>
     <h1 class="title">Snacks</h1>
     <div class="products">
-        <div class="takis">
-            <img class="takis-image" src="/images/GUEST_1b5e2441-f2a3-4c47-ad59-aa90d5683be6.jpeg">
-            <p class="takis-description">Red Takis</p>
-            <div class="price-section">
-                <p class="price">$2.50</p>
-                <button class="btn-buy" id="btn-buy-red-takis">Buy</button>
+        <div class="takis shop-item">
+            <img class="takis-image shop-item-image" src="/images/GUEST_1b5e2441-f2a3-4c47-ad59-aa90d5683be6.jpeg">
+            <p class="takis-description shop-item-title">Red Takis</p>
+            <div class="price-section shop-item-details">
+                <p class="price shop-item-price">$2.50</p>
+                <button class="btn-buy btn-buy btn btn-primary shop-item-button" id="btn-buy-red-takis">ADD TO CART</button>
             </div>
         </div>
-        <div class="takis">
-            <img class="takis-image" src="/images/Takis-Blue-Heat-113g_720x711.png">
-            <p class="takis-description">Blue Takis</p>
-            <div class="price-section">
-                <p class="price">$4.00</p>
-                <button class="btn-buy" id="btn-buy-blue-takis">Buy</button>
+        <div class="takis shop-item">
+            <img class="takis-image shop-item-image" src="/images/Takis-Blue-Heat-113g_720x711.png">
+            <p class="takis-description shop-item-title">Blue Takis</p>
+            <div class="price-section shop-item-details">
+                <p class="price shop-item-price">$4.00</p>
+                    <button class="btn-buy btn-buy btn btn-primary shop-item-button" id="btn-buy-blue-takis">ADD TO CART</button>
+                </form>
             </div>
         </div>
-        <div class="takis">
-            <img class="takis-image" src="/images/e77c039a-2e08-4341-b74e-c7ab1f892743.61f97f8333fc88473e972d30c161c958.jpeg">
-            <p class="takis-description">Waves Takis</p>
-            <div class="price-section">
-                <p class="price">$5.00</p>
-                <button class="btn-buy" id="btn-buy-waves-takis">Buy</button>
+        <div class="takis shop-item">
+            <img class="takis-image shop-item-image" src="/images/e77c039a-2e08-4341-b74e-c7ab1f892743.61f97f8333fc88473e972d30c161c958.jpeg">
+            <p class="takis-description shop-item-title">Waves Takis</p>
+            <div class="price-section shop-item-details">
+                <p class="price shop-item-price">$5.00</p>
+                <button class="btn-buy btn-buy btn btn-primary shop-item-button" id="btn-buy-waves-takis">ADD TO CART</button>
             </div>
         </div>
-        <div class="takis">
-            <img class="takis-image" src="/images/71MrLeq3ThL._SL1500_.jpg">
-            <p class="takis-description">Slim Jim</p>
-            <div class="price-section">
-                <p class="price">$3.00</p>
-                <button class="btn-buy" id="btn-buy-waves-takis">Buy</button>
+        <div class="takis shop-item">
+            <img class="takis-image shop-item-image" src="/images/71MrLeq3ThL._SL1500_.jpg">
+            <p class="takis-description shop-item-title">Slim Jim</p>
+            <div class="price-section shop-item-details">
+                <p class="price shop-item-price">$3.00</p>
+                <button class="btn-buy btn-buy btn btn-primary shop-item-button" id="btn-buy-waves-takis">ADD TO CART</button>
             </div>
         </div>
-        <div class="takis">
-            <img class="takis-image" src="/images/51TDPgv3KNL._SL1500_ (1).jpg">
-            <p class="crisps-description">Crisps Takis</p>
-            <div class="price-section">
-                <p class="price-crisps">$4.00</p>
-                <button class="btn-buy-crisps" id="btn-buy-waves-takis">Buy</button>
+        <div class="takis shop-item">
+            <img class="takis-image shop-item-image" src="/images/51TDPgv3KNL._SL1500_ (1).jpg">
+            <p class="crisps-description shop-item-title">Crisps Takis</p>
+            <div class="price-section shop-item-details">
+                <p class="price-crisps shop-item-price">$4.00</p>
+                <button class="btn-buy-pringles btn btn-primary shop-item-button" id="btn-buy-waves-takis">ADD TO CART</button>
             </div>
         </div>
     </div>
 
     <div class="products">
-        <div class="takis">
-            <img class="takis-image" src="/images/extra hot.jpeg">
-            <p class="takis-description">Cheetos Extra Flaming</p>
-            <div class="price-section">
-                <p class="price">$5.50</p>
-                <button class="btn-buy" id="btn-buy-hot-cheetos">Buy</button>
+        <div class="takis shop-item">
+            <img class="takis-image shop-item-image" src="/images/extra hot.jpeg">
+            <p class="takis-description shop-item-title">Cheetos Extra Flaming</p>
+            <div class="price-section shop-item-details">
+                <p class="price shop-item-price">$5.50</p>
+                <button class="btn-buy btn btn-primary shop-item-button" id="btn-buy-hot-cheetos">ADD TO CART</button>
             </div>
         </div>
-        <div class="takis">
-            <img class="takis-image" src="/images/91T6I6DKqYL._SL1500_.jpg">
-            <p class="takis-description">Ruffles Flaming Hot</p>
-            <div class="price-section">
-                <p class="price">$4.50</p>
-                <button class="btn-buy" id="btn-buy-blue-takis">Buy</button>
+        <div class="takis shop-item">
+            <img class="takis-image shop-item-image" src="/images/91T6I6DKqYL._SL1500_.jpg">
+            <p class="takis-description shop-item-title">Ruffles Flaming Hot</p>
+            <div class="price-section shop-item-details">
+                <p class="price shop-item-price">$4.50</p>
+                <button class="btn-buy btn btn-primary shop-item-button" id="btn-buy-blue-takis">ADD TO CART</button>
             </div>
         </div>
-        <div class="takis">
-            <img class="takis-image" src="/images/download (4).jpeg">
-            <p class="takis-description">Fritos Chili Cheese</p>
-            <div class="price-section">
-                <p class="price">$7.25</p>
-                <button class="btn-buy" id="btn-buy-waves-takis">Buy</button>
+        <div class="takis shop-item">
+            <img class="takis-image shop-item-image" src="/images/download (4).jpeg">
+            <p class="takis-description shop-item-title">Fritos Chili Cheese</p>
+            <div class="price-section shop-item-details">
+                <span class="shop-item-price price">$7.00</span>
+                <button class="btn-buy btn btn-primary shop-item-button" id="btn-buy-waves-takis">ADD TO CART</button>
             </div>
         </div>
-        <div class="takis">
-            <img class="takis-image" src="/images/Doritos-Flamin-Hot-Tortilla-Chips-92g-500x500.jpg">
-            <p class="takis-description">Doritos Flaming Hot</p>
-            <div class="price-section">
-                <p class="price">$4.00</p>
-                <button class="btn-buy" id="btn-buy-waves-takis">Buy</button>
+        <div class="takis shop-item">
+            <img class="takis-image shop-item-image" src="/images/Doritos-Flamin-Hot-Tortilla-Chips-92g-500x500.jpg">
+            <p class="takis-description shop-item-title">Doritos Flaming Hot</p>
+            <div class="price-section shop-item-details">
+                <p class="shop-item-price price">$4.00</p>
+                <button class="btn-buy btn btn-primary shop-item-button" id="btn-buy-waves-takis" type="button">ADD TO CART</button>
             </div>
         </div>
-        <div class="takis">
-            <img class="takis-image" src="/images/2628641_hd_1.jpg">
-            <p class="crisps-description">Lays Chips Chicken</p>
-            <div class="price-section">
-                <p class="price-crisps">$2.25</p>
-                <button class="btn-buy-crisps" id="btn-buy-waves-takis">Buy</button>
+        <div class="takis shop-item">
+            <img class="takis-image shop-item-image" src="/images/2628641_hd_1.jpg">
+            <p class="crisps-description shop-item-title">Lays Chips Chicken</p>
+            <div class="shop-item-details price-section">
+                <span class="shop-item-price price-crisps">$3.00</span>
+                <button class="btn btn-primary btn-buy-crisps shop-item-button" type="button">ADD TO CART</button>
             </div>
         </div>
     </div>
 
+    <section class="container content-section">
+        <h2 class="section-header">CART</h2>
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">Item</span>
+            <span class="cart-price cart-header cart-column">Price</span>
+            <span class="cart-quantity cart-header cart-column">Quantity</span>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">$0</span>
+        </div>
+        <form action="mailto:community.products.inc@gmail.com" method="post" enctype="text/plain">
+            <input type="submit" value="PURCHASE" class="btn btn-primary btn-purchase" type="button"></input>
+        </form>
+    </section>
+
 </body>
+<script>
+    if (document.readyState == 'loading') {
+    document.addEventListener('DOMContentLoaded', ready)
+} else {
+    ready()
+}
+
+function ready() {
+    var removeCartItemButtons = document.getElementsByClassName('btn-danger')
+    for (var i = 0; i < removeCartItemButtons.length; i++) {
+        var button = removeCartItemButtons[i]
+        button.addEventListener('click', removeCartItem)
+    }
+
+    var quantityInputs = document.getElementsByClassName('cart-quantity-input')
+    for (var i = 0; i < quantityInputs.length; i++) {
+        var input = quantityInputs[i]
+        input.addEventListener('change', quantityChanged)
+    }
+
+    var addToCartButtons = document.getElementsByClassName('shop-item-button')
+    for (var i = 0; i < addToCartButtons.length; i++) {
+        var button = addToCartButtons[i]
+        button.addEventListener('click', addToCartClicked)
+    }
+
+    document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
+}
+
+function purchaseClicked() {
+    alert('Thank you for your purchase')
+    var cartItems = document.getElementsByClassName('cart-items')[0]
+    while (cartItems.hasChildNodes()) {
+        cartItems.removeChild(cartItems.firstChild)
+    }
+    updateCartTotal()
+}
+
+function removeCartItem(event) {
+    var buttonClicked = event.target
+    buttonClicked.parentElement.parentElement.remove()
+    updateCartTotal()
+}
+
+function quantityChanged(event) {
+    var input = event.target
+    if (isNaN(input.value) || input.value <= 0) {
+        input.value = 1
+    }
+    updateCartTotal()
+}
+
+function addToCartClicked(event) {
+    var button = event.target
+    var shopItem = button.parentElement.parentElement
+    var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
+    var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
+    var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
+    addItemToCart(title, price, imageSrc)
+    updateCartTotal()
+}
+
+function addItemToCart(title, price, imageSrc) {
+    var cartRow = document.createElement('div')
+    cartRow.classList.add('cart-row')
+    var cartItems = document.getElementsByClassName('cart-items')[0]
+    var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
+    for (var i = 0; i < cartItemNames.length; i++) {
+        if (cartItemNames[i].innerText == title) {
+            alert('This item is already added to the cart')
+            return
+        }
+    }
+    var cartRowContents = `
+        <div class="cart-item cart-column">
+            <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
+            <span class="cart-item-title">${title}</span>
+        </div>
+        <span class="cart-price cart-column">${price}</span>
+        <div class="cart-quantity cart-column">
+            <input class="cart-quantity-input" type="number" value="1">
+            <button class="btn btn-danger" type="button">REMOVE</button>
+        </div>`
+    cartRow.innerHTML = cartRowContents
+    cartItems.append(cartRow)
+    cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
+    cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
+}
+
+function updateCartTotal() {
+    var cartItemContainer = document.getElementsByClassName('cart-items')[0]
+    var cartRows = cartItemContainer.getElementsByClassName('cart-row')
+    var total = 0
+    for (var i = 0; i < cartRows.length; i++) {
+        var cartRow = cartRows[i]
+        var priceElement = cartRow.getElementsByClassName('cart-price')[0]
+        var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
+        var price = parseFloat(priceElement.innerText.replace('$', ''))
+        var quantity = quantityElement.value
+        total = total + (price * quantity)
+    }
+    total = Math.round(total * 100) / 100
+    document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
+}
+</script>
 </html>
