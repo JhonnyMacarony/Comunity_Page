@@ -171,6 +171,21 @@
             background: #555; 
         }
         @media (max-width: 600px) {
+            .btn-buy{
+                margin-left: 14px;
+            }
+            .btn-buy-crisps{
+                margin-left: 13px;
+            }
+            .takis-description{
+                color: white;
+                max-width: 190px;
+                margin-top: 170px;
+                background-color: rgba(0, 0, 0, 0.24);
+            }
+            .crisps-description{
+                width: 190px;
+            }
             .header{
                 width: 250vw;
             }
@@ -181,9 +196,6 @@
             .title-description{
                 width: 1200px;
             }
-            .products{
-                margin-left: 620px;
-            }
             .back-arrow{
             font-size: 27px;
             font-weight: bold;
@@ -191,7 +203,26 @@
             margin-left: -340px;
             padding: 10px;
             margin-top: -26px;
+            }
+            .takis{
+                margin-left: 40px;
+                padding: 0 100px;
+                overflow: hidden;
+            }
+            .products{
+                margin-left: 650px;
+                padding-right: 670px;
+            }
+            .container{
+                width: 290vw;
+            }
+            .btn-buy-pringles{
+                margin-left: 3px;
+            }
         }
+        .invisible-bar{
+            top: -100000000px;
+            display: none;
         }
         .container {
             color: white;
@@ -343,6 +374,42 @@
             width: 153px;
             height: 55px;
         }
+        .purchase{
+            background-color: rgba(255, 255, 255, 0.555);
+            width: 1200px;
+            height: 850px;
+            position: absolute;
+            margin-left: 160px;
+            z-index: 111;
+            margin-top: 20px;
+            animation-name: slide;
+            animation-duration: 4s;  
+            animation-fill-mode: forwards;
+        }
+        @keyframes slide{
+            from{
+                top: -1960px;
+            }
+            to{
+                top: 270px;
+            }
+        }
+        .close-bar{
+            position: absolute;
+            color: #333;
+            margin-top: 10px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .close-bar:hover{
+            color: rgb(80, 80, 80);
+        }
+        .text{
+            color: #fff;
+            margin-top: 50px;
+            margin-left: 50px;
+            font-size: 30px;
+        }
     </style>            
 </head>
 <body>
@@ -355,6 +422,10 @@
             <p class="decription-text">We are delivering just in USA and Romania</p>
         </div>
     </header>
+    <div class="" id="purchase-format">
+        <div class="close-bar invisible-bar" id="close-bar">✖</div>
+        <p id="purchase-description" class="text invisible-bar">If you want to buy this product message at this email: community.products.inc@gmail.com</p>
+    </div>
     <h1 class="title">Snacks</h1>
     <div class="products">
         <div class="takis shop-item">
@@ -456,13 +527,15 @@
             <strong class="cart-total-title">Total</strong>
             <span class="cart-total-price">$0</span>
         </div>
-        <form action="mailto:community.products.inc@gmail.com" method="post" enctype="text/plain">
-            <input type="submit" value="PURCHASE" class="btn btn-primary btn-purchase" type="button"></input>
-        </form>
+        <button class="btn btn-primary btn-purchase" type="button">Purchase</button>
     </section>
 
 </body>
 <script>
+    const purchaseForm = document.getElementById("purchase-format")
+    const closeFormat = document.getElementById("close-bar")
+    const purchaseDescription = document.getElementById("purchase-description")
+
     if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
 } else {
@@ -491,8 +564,17 @@ function ready() {
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 }
 
+    closeFormat.addEventListener("click", ()=>{
+        purchaseForm.classList.remove("purchase")
+        closeFormat.classList.add("invisible-bar")
+        purchaseDescription.classList.add("invisible-bar")
+    })
+
 function purchaseClicked() {
     alert('Thank you for your purchase')
+    purchaseForm.classList.add("purchase")
+    closeFormat.classList.remove("invisible-bar")
+    purchaseDescription.classList.remove("invisible-bar")
     var cartItems = document.getElementsByClassName('cart-items')[0]
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild)
