@@ -16,7 +16,8 @@
         }
         body{
             background-color: #0a0820;
-            background-image: linear-gradient(315deg, #0e0b2e 0%, #000000 74%);        }
+            background-image: linear-gradient(315deg, #0e0b2e 0%, #000000 74%);
+        }
         .head{
             position: relative;
             font-family: 'Gelasio', serif;
@@ -78,14 +79,13 @@
             font-weight: bold;
         }
         .news-description{
-            padding-left: 17px;
+            padding-left: 19px;
             font-family: 'Gelasio', serif;
             font-family: 'Montserrat', sans-serif;
             font-family: 'Poppins', sans-serif;
             font-size: 18px;
             font-weight: bold;
             margin-bottom: 20px;
-
         }
         .move{
             position: relative;
@@ -220,16 +220,16 @@
             background: #555; 
         }
         @media (max-width: 600px) {
-            .body{
+            body{
                 background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);      
                 background-repeat: no-repeat;
                 width: 280vw;
             }
-            .end{
-                width: 186vh;
-            }
             .header{
                 width: 280vw;
+            }
+            .end{
+                width: 186vh;
             }
             .title{
                 width: 400px;
@@ -246,7 +246,7 @@
             margin-top: 35px;
             margin-bottom: 20px;
             border: 4px solid white;
-            width: 150px;
+            width: 190px;
             border-radius: 10px;
             font-size: 40px;
             background-color: transparent;
@@ -261,7 +261,7 @@
             margin-top: 35px;
             margin-bottom: 20px;
             border: 4px solid white;
-            width: 170px;
+            width: 220px;
             border-radius: 10px;
             font-size: 40px;
             background-color: transparent;
@@ -310,7 +310,7 @@
             height: 30px;
             font-size: 20px;
             position: absolute;
-            margin-left: 200px;
+            margin-left: 240px;
             margin-top: 55px;
             background-color: transparent;
             border: none;
@@ -322,7 +322,7 @@
             height: 30px;
             font-size: 20px;
             position: absolute;
-            margin-left: 220px;
+            margin-left: 270px;
             margin-top: 55px;
             background-color: transparent;
             border: none;
@@ -334,7 +334,7 @@
             height: 30px;
             font-size: 20px;
             position: absolute;
-            margin-left: 240px;
+            margin-left: 245px;
             margin-top: 55px;
             background-color: transparent;
             border: none;
@@ -460,9 +460,6 @@
         .close-bar:hover{
             color: rgb(204, 204, 204);
         }
-        .shop{
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
@@ -478,7 +475,7 @@
     <div class="parent" id="home">
         <div class="normal-position-arrow" id="slide-arrow">►</div>
         <div class="invisible-bar left-bar" id="left-bar">
-            <div class="close-bar" id="close-bar">✖</div>
+            <dic class="close-bar" id="close-bar">✖</dic>
             <div class="home icons" id="home-page"><i class="fas fa-home"></i></div>
             <div class="news icons" id="news-page"><i class="far fa-newspaper"></i></div>
             <div class="event icons" id="event-page"><i class="far fa-calendar-alt"></i></div>
@@ -491,146 +488,36 @@
                 <h1 class="head head-custom">Community Page</h1>
             </div>
             <div class="title-description">
-                <p class="decription-text">Community Page is a website that helps teenagers starting a new life. Here they can learn how to start a business</p>
+                <p class="decription-text">Community Page - Informations : is a section where you can see how this site was build, who created it, etc.</p>
             </div>
         </header>
         <div class="body">
             <div class="news">
                 <p><button type="button" id="arrow-btn-news" class="arrow-button-news invisible arrow" >▼</button></p>
-                <h1 class="head move"><button class="news-btn" id="news-button" type="button">News </button></h1> 
+                <h1 class="head move"><button class="news-btn" id="news-button" type="button">Created </button></h1> 
                 <div id="news-description" class="news-description">
-                    <p class="news-subtitle">Today we added today:</p>
+                    <p class="news-subtitle">Programming Languages:</p>
                     <p class="subtitle-text">
-                        • a new version of the website<br>
-                        • facebook group
-                    </p>    
+                        → HTML <br>
+                        → CSS <br>
+                        → JavaScript <br>
+                        → Node.js <br>
+                    </p>   
                 </div>
             </div>
             <div class="events">
                 <p><button type="button" id="arrow-btn-events" class="arrow-button-events invisible arrow" >▼</button></p>
-                <h1 class="head move"><button class="event-btn" id="event-button" type="button">Events</button></h1>
+                <h1 class="head move"><button class="event-btn" id="event-button" type="button">Creators</button></h1>
                 <div id="event-description" class="news-description">
-                    <p class="news-subtitle">Next Sunday we will: </p>
+                    <p class="news-subtitle">The creator of this site:</p>
                     <p class="subtitle-text">
-                        • <br>
-                        • 
+                        → Candrea Ionut aka Jhonny<br>
+                    </p>
+                    <p class="news-subtitle">Help and site tester: </p>
+                    <p class="subtitle-text">
+                        → Cozan Constantin aka coco<br>
                     </p>
                 </div>
-            </div>
-            <div class="program">
-                <p><button type="button" id="arrow-btn-program" class="arrow-button-program invisible arrow" >▼</button></p>
-                <h1 class="head move"><button class="program-btn" id="program-button" type="button">Program</button></h1>
-                <div id="program-description" class="description-program">
-                    <div class="news-description">
-                        <p class="news-subtitle">The program of this week is:</p>
-                    </div>
-                    <table class="subtitle-text">
-                        <tr>
-                            <th>Monday</th>
-                            <th>Tuesday</th>
-                            <th>Wednesday</th>
-                            <th>Thursday</th>
-                            <th>Friday</th>
-                            <th>Saturday</th>
-                            <th>Sunday</th>
-                        </tr>
-                        <tr>
-                            <td>Wake up at 5 AM</td>
-                            <td>Wake up at 5 AM</td>
-                            <td>Wake up at 5 AM</td>
-                            <td>Wake up at 5 AM</td>
-                            <td>Wake up at 5 AM</td>
-                            <td>Wake up at 6 AM</td>
-                            <td>Wake up at 6:30 AM</td>
-                        </tr>
-                        <tr>
-                            <td>Take a shower at 5:30 AM</td>
-                            <td>Take a shower at 5:30 AM</td>
-                            <td>Take a shower at 5:30 AM</td>
-                            <td>Take a shower at 5:30 AM</td>
-                            <td>Take a shower at 5:30 AM</td>
-                            <td>Take a shower at 6:30 AM</td>
-                            <td>Take a shower at 7 AM</td>
-                        </tr>
-                        <tr>
-                            <td>Eat at 6 AM</td>
-                            <td>Eat at 6 AM</td>
-                            <td>Eat at 6 AM</td>
-                            <td>Eat at 6 AM</td>
-                            <td>Eat at 6 AM</td>
-                            <td>Eat at 7 AM</td>
-                            <td>Eat at 8 AM</td>
-                        </tr>
-                        <tr>
-                            <td>From 6 to 7 you can learn or you can read<br> a book or anything that helps you</td>
-                            <td>From 6 to 7 you can learn or you can read<br> a book or anything that helps you</td>
-                            <td>From 6 to 7 you can learn or you can read<br> a book or anything that helps you</td>
-                            <td>From 6 to 7 you can learn or you can read<br> a book or anything that helps you</td>
-                            <td>From 6 to 7 you can learn or you can read<br> a book or anything that helps you</td>
-                            <td>From 7 to 8 you can learn or you can read<br> a book or anything that helps you</td>
-                            <td>From 8 you can learn or you can read<br> a book or anything that helps you</td>
-                        </tr>
-                        <tr>
-                            <td>At 7:30 AM - 8 AM go to school</td>
-                            <td>At 7:30 AM - 8 AM go to school</td>
-                            <td>At 7:30 AM - 8 AM go to school</td>
-                            <td>At 7:30 AM - 8 AM go to school</td>
-                            <td>At 7:30 AM - 8 AM go to school</td>
-                            <td>At 8:30 AM - 8 AM go running outside and do some exercises</td>
-                            <td>At 9 - 10 AM go running outside and do some exercises</td>
-                        </tr>
-                        <tr>
-                            <td>When you finish classes go home and do your homework</td>
-                            <td>When you finish classes go home and do your homework</td>
-                            <td>When you finish classes go home and do your homework</td>
-                            <td>When you finish classes go home and do your homework</td>
-                            <td>When you finish classes go home and do your homework</td>
-                            <td>When you're done running, go home and go to Discord on our server<br> to see what we're doing</td>
-                            <td>When you're done running, go home and go to Discord on our server<br> to see what we're doing</td>
-                        </tr>
-                        <tr>
-                            <td>Relax at least 25 minutes</td>
-                            <td>Relax at least 25 minutes</td>
-                            <td>Relax at least 25 minutes</td>
-                            <td>Relax at least 25 minutes</td>
-                            <td>Relax at least 25 minutes</td>
-                            <td>Relax at least 50 minutes</td>
-                            <td>Relax at least 1 hour</td>
-                        </tr>
-                        <tr>
-                            <td>When you finish your homework, you can continue learning <br> and go on discord on our server </td>
-                            <td>When you finish your homework, you can continue learning <br> and go on discord on our server </td>
-                            <td>When you finish your homework, you can continue learning <br> and go on discord on our server </td>
-                            <td>When you finish your homework, you can continue learning <br> and go on discord on our server </td>
-                            <td>When you finish your homework, you can continue learning <br> and go on discord on our server </td>
-                            <td>When you relaxing, you can continue learning <br> and go on discord on our server or do anything you want</td>
-                            <td>When you relaxing, you can continue learning <br> and go on discord on our server or do anything you want</td>
-                        </tr>
-                        <tr>
-                            <td>Go to bed at least 9:30 - 10</td>
-                            <td>Go to bed at least 9:30 - 10</td>
-                            <td>Go to bed at least 9:30 - 10</td>
-                            <td>Go to bed at least 9:30 - 10</td>
-                            <td>Go to bed at least 9:30 - 10</td>
-                            <td>Go to bed at least 10:30 - 11</td>
-                            <td>Go to bed at least 9:30 - 10</td>
-                        </tr>
-                    </table>
-                    <div class="tabel-description">
-                        <p class="description-text">
-                            This table is not mandatory but would be recommended<br>
-                            On Sunday you can do whatever you want. 
-                        </p>
-                </div>
-            </div>
-            <div class="ocupations">
-                <p><button type="button" id="arrow-btn-occupation" class="arrow-button-occupation invisible arrow" >▼</button></p>
-                <h1 class="head move"><button class="occupation-btn" id="occupation-button" type="button">What do we do</button></h1>
-                <p id="occupations-description" class="ocupations-description">
-                    We can teach you about investing, crypto, how to start a business.<br>
-                    We will help each other with your business idea.<br>
-                    Join our discord to to see what else we do.
-                </p>
             </div>
         </div>
         <div class="end">
@@ -641,9 +528,6 @@
                     <a href="https://www.youtube.com/channel/UCHC1CVbqUFYbFSaUGdpYxpw" target="_blank"><i class="fa fa-youtube-play icons youtube"></i></a>
                     <a href="https://www.tiktok.com/@comunity_zone" class=" icons" target="_blank"><i class="fab fa-tiktok tiktok"></i></a>
                     <a href="" class="icons"><i class="fab fa-discord discord"></i></a>
-                </div>
-                <div class="store">
-                    <a href="/store"><div class="shop icons"><i class="fas fa-shopping-cart"></i></div></a>
                 </div>
             </div>  
         </div>

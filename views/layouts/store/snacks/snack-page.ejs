@@ -410,6 +410,110 @@
             margin-left: 50px;
             font-size: 30px;
         }
+        .red-takis{
+            cursor: pointer;
+        }
+        .red-takis-format{
+            display: flex;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.555);
+            margin-left: 300px;
+            z-index: 2222;
+            padding: 15px;
+            border-radius: 20px;
+            height: 600px;
+        }
+        .product-description{
+            background-color: rgba(255, 255, 255, 0.699);
+            width: 400px;
+            margin-left: 20px;
+            border-radius: 7px;
+        }
+        .product-name{
+            padding: 10px;
+            font-size: 35px;
+            margin-left: 150px;
+            font-weight: bold;
+        }
+        .about-product{
+            margin-top: 10px;
+            margin-left: 50px;
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+        .description-text{
+            margin-top: 10px;
+            margin-left: 20px;
+            font-size: 20px;
+        }
+        .bag-size{
+            margin-top: 10px;
+            margin-left: 60px;
+        }
+        .small-btn{
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.692);
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+            margin-right: 40px;
+        }
+        .medium-btn{
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.692);
+            border: none;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: bold;
+            margin-right: 40px;
+        }
+        .big-btn{
+            padding: 22px;
+            background-color: rgba(255, 255, 255, 0.692);
+            border: none;
+            cursor: pointer;
+            font-size: 19px;
+            font-weight: bold;
+        }
+        .big-btn:hover{
+            background-color: rgba(255, 255, 255, 0.815);
+        }
+        .small-btn:hover{
+            background-color: rgba(255, 255, 255, 0.815);
+        }
+        .medium-btn:hover{
+            background-color: rgba(255, 255, 255, 0.815);
+        }
+        .takis-image-format{
+            border-radius: 3px;
+            height: 520px;
+        }
+        .takis-image{
+            cursor: pointer;
+        }
+        .stock{
+            color: green;
+            font-weight: bold;
+            font-size: 15px;
+            margin-top: 260px;
+            margin-left: 20px;
+        }
+        .form-price{
+            font-size: 20px;
+            margin-top: -180px;
+            position: absolute;
+            margin-left: 25px;
+            display: flex;
+        }
+        .price-title{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .actual-price{
+            margin-left: 10px;
+            padding: 4px;
+        }
     </style>            
 </head>
 <body>
@@ -427,30 +531,107 @@
         <div class="close-bar invisible-bar" id="close-bar">✖</div>
         <p id="purchase-description" class="text invisible-bar">If you want to buy this product message at this email: community.products.inc@gmail.com</p>
     </div>
+                                                                                    <!-- Red takis format -->
+    <div class="red-takis-format invisible-bar" id="red-takis-format">
+        <div class="close-bar" id="close-bar-red-takis">✖</div>
+        <div class="product-view">
+            <img id="normal-size-red-takis" class="takis-image-format" src="/images/GUEST_1b5e2441-f2a3-4c47-ad59-aa90d5683be6.jpeg">
+            <img id="small-size-red-takis" class="takis-image-format invisible-bar" src="/images/64e9b655-9355-4dbd-b8ac-0528fbca949a.__CR0,0,300,300_PT0_SX300_V1___.jpeg">
+            <img id="large-size-red-takis" class="takis-image-format invisible-bar" src="/images/757a40ac-9cc2-48e6-a8f6-b4d4cc7a9fb5_1.b7c13ac38a3e2c3cb78094417b43063f.jpeg">
+            <div class="bag-size">
+                <button id="small-btn-red-takis" class="small-btn">Small</button>
+                <button id="medium-btn-red-takis" class="medium-btn">Normal</button>
+                <button id="large-btn-red-takis" class="big-btn">Large</button>    
+            </div>
+        </div>
+        <div class="product-description">
+            <h2 class="product-name">Red Takis</h2>
+            <h3 class="about-product">Description</h3>
+            <p class="description-text">• 12 - 2 oz. Bags snack corn chips - intense hot chili pepper and lime flavored</p>
+            <p class="description-text">• Spicy, crunchy rolled taco snacks</p>
+            <p class="description-text">• Great flavor - instant hot crunch</p>
+            <p class="description-text">• Corn based spicy rolled mini taco chips</p>
+            <p class="description-text">• If you have one you will want another and another</p>
+            <p class="stock">In stock</p>
+            <div class="form-price"><p class="price-title">Price:</p> <p id="form-price-red-takis" class="actual-price"> $2.50</p></div>
+        </div>
+    </div>
+                                                                                    <!-- Blue takis format -->
+    <div class="red-takis-format invisible-bar" id="blue-takis-format">
+        <div class="close-bar" id="close-bar-blue-takis">✖</div>
+        <div class="product-view">
+            <img id="normal-size-blue-takis" class="takis-image-format" src="/images/Takis-Blue-Heat-113g_720x711.png">
+            <img id="small-size-blue-takis" class="takis-image-format invisible-bar" src="/images/barcel-takis-fuego-azul.jpg">
+            <img id="large-size-blue-takis" class="takis-image-format invisible-bar" src="/images/s-l640.png">
+            <div class="bag-size">
+                <button id="small-btn-blue-takis" class="small-btn">Small</button>
+                <button id="medium-btn-blue-takis" class="medium-btn">Normal</button>
+                <button id="large-btn-blue-takis" class="big-btn">Large</button>    
+            </div>
+        </div>
+        <div class="product-description">
+            <h2 class="product-name">Blue Takis</h2>
+            <h3 class="about-product">Description</h3>
+            <p class="description-text">• These extra-spicy corn chips pack a punch of flavor that will leave your tastebuds begging for more</p>
+            <p class="description-text">• Featuring a distinctive rolled design for extra crunch, and covered in a combination of hot chili pepper and tangy lime seasoning</p>
+            <p class="description-text">• Takis Blue are a fun and flavorful take on traditional tortilla chips</p>
+            <p class="stock">In stock</p>
+            <div class="form-price"><p class="price-title">Price:</p> <p id="form-price-blue-takis" class="actual-price"> $2.80</p></div>
+        </div>
+    </div>
+                                                                                    <!-- Waves Takis format -->
+    <div class="red-takis-format invisible-bar" id="waves-takis-format">
+        <div class="close-bar" id="close-bar-waves-takis">✖</div>
+        <div class="product-view">
+            <img id="normal-size-waves-takis" class="takis-image-format" src="/images/e77c039a-2e08-4341-b74e-c7ab1f892743.61f97f8333fc88473e972d30c161c958.jpeg">
+            <img id="small-size-waves-takis" class="takis-image-format invisible-bar" src="">
+            <img id="large-size-waves-takis" class="takis-image-format invisible-bar" src="">
+            <div class="bag-size">
+                <button id="small-btn-waves-takis" class="small-btn">Small</button>
+                <button id="medium-btn-waves-takis" class="medium-btn">Normal</button>
+                <button id="large-btn-waves-takis" class="big-btn">Large</button>    
+            </div>
+        </div>
+        <div class="product-description">
+            <h2 class="product-name">Waves Takis</h2>
+            <h3 class="about-product">Description</h3>
+            <p class="description-text">• Thick-cut, extra-wavy potato chips for those looking for that wildly fierce flavor intensity of Takis and supremely a satisfying crunch</p>
+            <p class="description-text">• Intense Fuego flavor potato snacks combine the big and bold flavors of zesty lime and hot, spicy chili pepper, guaranteed to fire up your taste buds</p>
+            <p class="stock">In stock</p>
+            <div class="form-price"><p class="price-title">Price:</p> <p id="form-price-waves-takis" class="actual-price"> $2.80</p></div>
+        </div>
+    </div>
+
     <h1 class="title">Snacks</h1>
     <div class="products">
         <div class="takis shop-item">
-            <img class="takis-image shop-item-image" src="/images/GUEST_1b5e2441-f2a3-4c47-ad59-aa90d5683be6.jpeg">
+            <img  id="red-takis" class="takis-image shop-item-image" src="/images/GUEST_1b5e2441-f2a3-4c47-ad59-aa90d5683be6.jpeg">
+            <img id="small-red-takis" class="takis-image invisible-bar shop-item-image" src="/images/64e9b655-9355-4dbd-b8ac-0528fbca949a.__CR0,0,300,300_PT0_SX300_V1___.jpeg">
+            <img id="large-red-takis" class="takis-image invisible-bar shop-item-image" src="/images/757a40ac-9cc2-48e6-a8f6-b4d4cc7a9fb5_1.b7c13ac38a3e2c3cb78094417b43063f.jpeg">
             <p class="takis-description shop-item-title">Red Takis</p>
             <div class="price-section shop-item-details">
-                <p class="price shop-item-price">$2.50</p>
+                <p id="red-takis-price" class="price shop-item-price">$2.50</p>
                 <button class="btn-buy btn-buy btn btn-primary shop-item-button" id="btn-buy-red-takis">ADD TO CART</button>
             </div>
         </div>
         <div class="takis shop-item">
-            <img class="takis-image shop-item-image" src="/images/Takis-Blue-Heat-113g_720x711.png">
+            <img id="blue-takis" class="takis-image shop-item-image" src="/images/Takis-Blue-Heat-113g_720x711.png">
+            <img id="small-blue-takis" class="takis-image invisible-bar shop-item-image" src="/images/barcel-takis-fuego-azul.jpg">
+            <img id="large-blue-takis" class="takis-image invisible-bar shop-item-image" src="/images/s-l640.png">
             <p class="takis-description shop-item-title">Blue Takis</p>
             <div class="price-section shop-item-details">
-                <p class="price shop-item-price">$4.00</p>
+                <p id="blue-takis-price" class="price shop-item-price">$2.80</p>
                     <button class="btn-buy btn-buy btn btn-primary shop-item-button" id="btn-buy-blue-takis">ADD TO CART</button>
                 </form>
             </div>
         </div>
         <div class="takis shop-item">
-            <img class="takis-image shop-item-image" src="/images/e77c039a-2e08-4341-b74e-c7ab1f892743.61f97f8333fc88473e972d30c161c958.jpeg">
+            <img id="waves-takis" class="takis-image shop-item-image" src="/images/e77c039a-2e08-4341-b74e-c7ab1f892743.61f97f8333fc88473e972d30c161c958.jpeg">
+            <img id="small-waves-takis" class="takis-image invisible-bar shop-item-image" src="/images/">
+            <img id="large-waves-takis" class="takis-image invisible-bar shop-item-image" src="/images/">
             <p class="takis-description shop-item-title">Waves Takis</p>
             <div class="price-section shop-item-details">
-                <p class="price shop-item-price">$5.00</p>
+                <p id="waves-takis-price" class="price shop-item-price">$3.00</p>
                 <button class="btn-buy btn-buy btn btn-primary shop-item-button" id="btn-buy-waves-takis">ADD TO CART</button>
             </div>
         </div>
@@ -458,7 +639,7 @@
             <img class="takis-image shop-item-image" src="/images/71MrLeq3ThL._SL1500_.jpg">
             <p class="takis-description shop-item-title">Slim Jim</p>
             <div class="price-section shop-item-details">
-                <p class="price shop-item-price">$3.00</p>
+                <p class="price shop-item-price">$2.80</p>
                 <button class="btn-buy btn-buy btn btn-primary shop-item-button" id="btn-buy-waves-takis">ADD TO CART</button>
             </div>
         </div>
@@ -537,6 +718,52 @@
     const closeFormat = document.getElementById("close-bar")
     const purchaseDescription = document.getElementById("purchase-description")
 
+                                                                                                                //Red Takis Parts
+    const largeSizeRedTakisImage = document.getElementById("large-size-red-takis")
+    const smallSizeRedTakisImage = document.getElementById("small-size-red-takis")
+    const normalSizeRedTakisImage = document.getElementById("normal-size-red-takis")
+    const redTakisFormat = document.getElementById("red-takis-format")
+    const redTakis = document.getElementById("red-takis")
+    const closeRedTakisFormat = document.getElementById("close-bar-red-takis")
+    const redTakisPrice = document.getElementById("red-takis-price")
+    const mediumRedTakis = document.getElementById("medium-btn-red-takis")
+    const largeRedTakis = document.getElementById("large-btn-red-takis")
+    const smallRedTakis = document.getElementById("small-btn-red-takis")
+    const smallTakis = document.getElementById("small-red-takis")
+    const largeTakis = document.getElementById("large-red-takis")
+    const redTakisFormPrice = document.getElementById("form-price-red-takis")
+
+                                                                                                                //Blue Takis Parts
+    const blueTakisFormat = document.getElementById("blue-takis-format")
+    const closeBlueTakisFormat = document.getElementById("close-bar-blue-takis")
+    const normalSizeBlueTakisImage = document.getElementById("normal-size-blue-takis")
+    const smallSizeBlueTakisImage = document.getElementById("small-size-blue-takis")
+    const largeSizeBlueTakisImage = document.getElementById("large-size-blue-takis")
+    const mediumBlueTakis = document.getElementById("medium-btn-blue-takis")
+    const largeBtnBlueTakis = document.getElementById("large-btn-blue-takis")
+    const smallBtnBlueTakis = document.getElementById("small-btn-blue-takis")
+    const smallBlueTakis = document.getElementById("small-blue-takis")
+    const largeBlueTakis = document.getElementById("large-blue-takis")
+    const blueTakis = document.getElementById("blue-takis")
+    const blueTakisPrice = document.getElementById("blue-takis-price")
+    const blueTakisFormPrice = document.getElementById("form-price-blue-takis")
+
+                                                                                                                    //Blue Takis Parts
+    const wavesTakisFormat = document.getElementById("waves-takis-format")
+    const closeWavesTakisFormat = document.getElementById("close-bar-waves-takis")
+    const normalSizeWavesTakisImage = document.getElementById("normal-size-waves-takis")
+    const smallSizeWavesTakisImage = document.getElementById("small-size-waves-takis")
+    const largeSizeWavesTakisImage = document.getElementById("large-size-waves-takis")
+    const mediumWavesTakis = document.getElementById("medium-btn-waves-takis")
+    const largeBtnWavesTakis = document.getElementById("large-btn-waves-takis")
+    const smallBtnWavesTakis = document.getElementById("small-btn-waves-takis")
+    const smallWavesTakis = document.getElementById("small-waves-takis")
+    const largeWavesTakis = document.getElementById("large-waves-takis")
+    const wavesTakis = document.getElementById("waves-takis")
+    const wavesTakisPrice = document.getElementById("waves-takis-price")
+    const wavesTakisFormPrice = document.getElementById("form-price-waves-takis")
+
+
     if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
 } else {
@@ -549,6 +776,195 @@ function ready() {
         var button = removeCartItemButtons[i]
         button.addEventListener('click', removeCartItem)
     }
+
+                                                                                                                // Red Takis Events
+    closeRedTakisFormat.addEventListener("click", ()=>{
+        redTakisFormat.classList.add("invisible-bar")
+    })
+    smallTakis.addEventListener("click", ()=>{
+        redTakisFormat.classList.remove("invisible-bar")
+    })
+
+    redTakis.addEventListener("click", ()=>{
+        redTakisFormat.classList.remove("invisible-bar")
+    })
+
+    redTakis.addEventListener("click", ()=>{
+        redTakisFormat.classList.remove("invisible-bar")
+    })
+
+    largeTakis.addEventListener("click", ()=>{
+        redTakisFormat.classList.remove("invisible-bar")
+    })    
+
+    smallRedTakis.addEventListener("click", ()=>{
+        redTakisPrice.innerHTML= '' + '$' + 1.00 + '.00';
+        redTakisFormPrice.innerHTML = '$' + 1.00 + '.00'
+        largeSizeRedTakisImage.classList.add("invisible-bar")
+        normalSizeRedTakisImage.classList.add("invisible-bar")
+        smallSizeRedTakisImage.classList.remove("invisible-bar")
+        smallTakis.classList.remove("invisible-bar")
+        redTakis.classList.add("invisible-bar")
+        redTakis.classList.remove("shop-item-image")
+        smallTakis.classList.add("shop-item-image")
+        largeTakis.classList.remove("shop-item-image")
+        largeTakis.classList.add("invisible-bar")
+    })
+
+    mediumRedTakis.addEventListener("click", ()=>{
+        largeSizeRedTakisImage.classList.add("invisible-bar")
+        redTakisPrice.innerHTML= '' + '$' + 2.00 + '0';
+        redTakisFormPrice.innerHTML = '' + '$' + 2.80 + '0'
+        normalSizeRedTakisImage.classList.remove("invisible-bar")
+        smallSizeRedTakisImage.classList.add("invisible-bar")
+        smallTakis.classList.add("invisible-bar")
+        redTakis.classList.remove("invisible-bar")
+        redTakis.classList.add("shop-item-image")
+        largeTakis.classList.remove("shop-item-image")
+        largeTakis.classList.add("invisible-bar")
+        smallTakis.classList.remove("shop-item-image")
+    })
+
+    largeRedTakis.addEventListener("click", ()=>{
+        redTakisFormPrice.innerHTML = '' + '$' + 3.00 + '.00'
+        redTakisPrice.innerHTML= '$' + 3.00 + '.0';
+        largeSizeRedTakisImage.classList.remove("invisible-bar")
+        normalSizeRedTakisImage.classList.add("invisible-bar")
+        smallSizeRedTakisImage.classList.add("invisible-bar")
+        redTakis.classList.remove("shop-item-image")
+        smallTakis.classList.remove("shop-item-image")
+        largeTakis.classList.add("shop-item-image")
+        largeTakis.classList.remove("invisible-bar")
+        redTakis.classList.add("invisible-bar")
+        smallTakis.classList.add("invisible-bar")
+    })
+
+                                                                                                            // Blue Takis Events
+    closeBlueTakisFormat.addEventListener("click", ()=>{
+        blueTakisFormat.classList.add("invisible-bar")
+    })
+
+    blueTakis.addEventListener("click", ()=>{
+        blueTakisFormat.classList.remove("invisible-bar")
+    })
+
+    smallBlueTakis.addEventListener("click", ()=>{
+        blueTakisFormat.classList.remove("invisible-bar")
+    })
+
+    blueTakis.addEventListener("click", ()=>{
+        blueTakisFormat.classList.remove("invisible-bar")
+    })
+
+    largeBlueTakis.addEventListener("click", ()=>{
+        blueTakisFormat.classList.remove("invisible-bar")
+    })    
+    
+    smallBtnBlueTakis.addEventListener("click", ()=>{
+        blueTakisPrice.innerHTML= '$' + 1.25 + '0';
+        blueTakisFormPrice.innerHTML = '' + '$' + 1.25
+        largeSizeBlueTakisImage.classList.add("invisible-bar")
+        normalSizeBlueTakisImage.classList.add("invisible-bar")
+        smallSizeBlueTakisImage.classList.remove("invisible-bar")
+        smallBlueTakis.classList.remove("invisible-bar")
+        blueTakis.classList.add("invisible-bar")
+        blueTakis.classList.remove("shop-item-image")
+        largeBlueTakis.classList.remove("shop-item-image")
+        largeBlueTakis.classList.add("invisible-bar")
+        smallBlueTakis.classList.add("shop-item-image")
+    })
+
+    mediumBlueTakis.addEventListener("click", ()=>{
+        largeSizeBlueTakisImage.classList.add("invisible-bar")
+        blueTakisPrice.innerHTML= '$' + 2.80 + '.00';
+        blueTakisFormPrice.innerHTML = '' + '$' + 2.80 + '0'
+        normalSizeBlueTakisImage.classList.remove("invisible-bar")
+        smallSizeBlueTakisImage.classList.add("invisible-bar")
+        smallBlueTakis.classList.add("invisible-bar")
+        blueTakis.classList.remove("invisible-bar")
+        blueTakis.classList.add("shop-item-image")
+        largeBlueTakis.classList.remove("shop-item-image")
+        largeBlueTakis.classList.add("invisible-bar")
+        smallBlueTakis.classList.remove("shop-item-image")
+    })
+
+    largeBtnBlueTakis.addEventListener("click", ()=>{
+        blueTakisPrice.innerHTML= '$' + 3.00 + '.0';
+        blueTakisFormPrice.innerHTML = '' + '$' + 3.00 + '.00'
+        largeSizeBlueTakisImage.classList.remove("invisible-bar")
+        normalSizeBlueTakisImage.classList.add("invisible-bar")
+        smallSizeBlueTakisImage.classList.add("invisible-bar")
+        blueTakis.classList.remove("shop-item-image")
+        smallBlueTakis.classList.remove("shop-item-image")
+        largeBlueTakis.classList.add("shop-item-image")
+        largeBlueTakis.classList.remove("invisible-bar")
+        blueTakis.classList.add("invisible-bar")
+        smallBlueTakis.classList.add("invisible-bar")
+    })
+
+                                                                                                                // Waves Takis Events
+    closeWavesTakisFormat.addEventListener("click", ()=>{
+        wavesTakisFormat.classList.add("invisible-bar")
+    })
+
+    wavesTakis.addEventListener("click", ()=>{
+        wavesTakisFormat.classList.remove("invisible-bar")
+    })
+
+    smallWavesTakis.addEventListener("click", ()=>{
+        wavesTakisFormat.classList.remove("invisible-bar")
+    })
+
+    wavesTakis.addEventListener("click", ()=>{
+        wavesTakisFormat.classList.remove("invisible-bar")
+    })
+
+    largeWavesTakis.addEventListener("click", ()=>{
+        wavesTakisFormat.classList.remove("invisible-bar")
+    })    
+    
+    smallBtnWavesTakis.addEventListener("click", ()=>{
+        wavesTakisPrice.innerHTML= '$' + 1.25 ;
+        wavesTakisFormPrice.innerHTML = '' + '$' + 1.25
+        largeSizeWavesTakisImage.classList.add("invisible-bar")
+        normalSizeWavesTakisImage.classList.add("invisible-bar")
+        smallSizeWavesTakisImage.classList.remove("invisible-bar")
+        smallWavesTakis.classList.remove("invisible-bar")
+        wavesTakis.classList.add("invisible-bar")
+        wavesTakis.classList.remove("shop-item-image")
+        largeWavesTakis.classList.remove("shop-item-image")
+        largeWavesTakis.classList.add("invisible-bar")
+        smallWavesTakis.classList.add("shop-item-image")
+    })
+
+    mediumWavesTakis.addEventListener("click", ()=>{
+        largeSizeWavesTakisImage.classList.add("invisible-bar")
+        wavesTakisPrice.innerHTML= '$' + 3.00 + '.00';
+        wavesTakisFormPrice.innerHTML = '' + '$' + 2.80 + '0'
+        normalSizeWavesTakisImage.classList.remove("invisible-bar")
+        smallSizeWavesTakisImage.classList.add("invisible-bar")
+        smallWavesTakis.classList.add("invisible-bar")
+        wavesTakis.classList.remove("invisible-bar")
+        wavesTakis.classList.add("shop-item-image")
+        largeWavesTakis.classList.remove("shop-item-image")
+        largeWavesTakis.classList.add("invisible-bar")
+        smallWavesTakis.classList.remove("shop-item-image")
+    })
+
+    largeBtnWavesTakis.addEventListener("click", ()=>{
+        wavesTakisPrice.innerHTML= '$' + 3.25 + '.0';
+        wavesTakisFormPrice.innerHTML = '' + '$' + 3.00 + '.00'
+        largeSizeWavesTakisImage.classList.remove("invisible-bar")
+        normalSizeWavesTakisImage.classList.add("invisible-bar")
+        smallSizeWavesTakisImage.classList.add("invisible-bar")
+        wavesTakis.classList.remove("shop-item-image")
+        smallWavesTakis.classList.remove("shop-item-image")
+        largeWavesTakis.classList.add("shop-item-image")
+        largeWavesTakis.classList.remove("invisible-bar")
+        wavesTakis.classList.add("invisible-bar")
+        smallWavesTakis.classList.add("invisible-bar")
+    })
+
 
     var quantityInputs = document.getElementsByClassName('cart-quantity-input')
     for (var i = 0; i < quantityInputs.length; i++) {

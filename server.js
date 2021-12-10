@@ -28,6 +28,10 @@ app.get("/store", (req, res) =>{
     res.render("layouts/store/store-page.ejs")
 })
 
+app.get("/informations", (req, res) =>{
+    res.render("layouts/informations.ejs")
+})
+
 app.get("/store/snacks", (req, res) =>{
     res.render("layouts/store/snacks/snack-page.ejs")
 })
@@ -35,7 +39,6 @@ app.get("/store/snacks", (req, res) =>{
 app.get("/store/candies", (req, res) =>{
     res.render("layouts/store/candies/candy-page.ejs")
 })
-
 
 app.set("view engine", "ejs")
 app.set("views", __dirname + '/views')
