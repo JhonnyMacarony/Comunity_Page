@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+        emailjs.init("user_EUpbaJZihlZSemSVKNYvQ");
+        })();
+    </script>
     <title>Store</title>
     <style>
         *{
@@ -405,10 +411,11 @@
             color: rgb(80, 80, 80);
         }
         .text{
-            color: #fff;
-            margin-top: 50px;
+            color: rgb(110, 110, 110);
+            margin-top: -50px;
             margin-left: 50px;
             font-size: 30px;
+            position: absolute;
         }
         .red-takis{
             cursor: pointer;
@@ -514,6 +521,95 @@
             margin-left: 10px;
             padding: 4px;
         }
+        .purchase-terms{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 400px;
+            margin-top: 50px;
+            margin-left: 30px;
+        }
+        #fromName{
+            margin: 10px;
+            padding: 10px;
+            font-size: 20px;
+            border: none;
+        }
+        #msg{
+            margin: 10px;
+            padding: 10px;
+            font-size: 20px;
+            border: none;
+        }
+        #street{
+            margin: 10px;
+            padding: 10px;
+            font-size: 20px;
+            border: none;
+        }
+        #email{
+            margin: 10px;
+            padding: 10px;
+            font-size: 20px;
+            border: none;
+        }
+        #country{
+            margin: 10px;
+            padding: 10px;
+            font-size: 20px;
+            border: none;
+        }
+        #city{
+            margin: 10px;
+            padding: 10px;
+            font-size: 20px;
+            border: none;
+        }
+        #zipcode{
+            margin: 10px;
+            padding: 10px;
+            font-size: 20px;
+            border: none;
+        }
+        #quantity-send{
+            margin: 10px;
+            padding: 10px;
+            font-size: 20px;
+            border: none;
+        }
+        .send-button{
+            margin: 10px;
+            background-color: green;
+            width: 300px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            border: none;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            margin-left: 800px;
+            cursor: pointer;
+        }
+        .send-button:hover{
+            background-color: rgb(1, 151, 1);
+        }
+        .title-fields{
+            margin-left: 450px;
+            margin-top: 30px;
+            color: rgb(110, 110, 110);
+        }
+        #product-size{
+            margin: 10px;
+            padding: 10px;
+            font-size: 20px;
+            border: none;
+        }
+        #phone{
+            margin: 10px;
+            padding: 10px;
+            font-size: 20px;
+            border: none;
+        }
     </style>            
 </head>
 <body>
@@ -527,9 +623,28 @@
             <p class="decription-text">The products can be sold at lower or higher prices.The prices are not set yet.</p>
         </div>
     </header>
-    <div class="" id="purchase-format">
-        <div class="close-bar invisible-bar" id="close-bar">✖</div>
-        <p id="purchase-description" class="text invisible-bar">If you want to buy this product message at this email: community.products.inc@gmail.com</p>
+    <div class="invisible-bar" id="purchase-format">
+        <div class="close-bar" id="close-bar">✖</div>
+        <h1 id="title-fields" class='title-fields'>Fill in the following fields</h1>
+        <div id="purchase-terms" class="purchase-terms">
+            <input type="text" id="fromName" placeholder="Your full name">
+            <input type="email" id="email" placeholder="Enter your email">
+            <input type="text" id="phone" placeholder="Enter your phone number">
+            <input type="text" id="country" placeholder="Enter your country">
+            <input type="text" id="city" placeholder="Enter your city">
+            <input type="text" id="street" placeholder="Enter your street">
+            <input type="text" id="zipcode" placeholder="Enter your zipcode">
+            <input type="number" id="quantity-send" placeholder='Enter your product quantity'>
+            <select id="product-size" name="Select your product size">
+                <option></option>
+                <option value="small">Small</option>
+                <option value="normal">Normal</option>
+                <option value="large">Large</option>
+            </select>
+            <input type="text" id="msg" placeholder="Enter your product name">
+            <button class="send-button" onclick="sendMail()">Confirm</button>    
+        </div>
+        <p id="purchase-description" class="text">Shipping costs between 0-25 $ -1 $ </p>
     </div>
                                                                                     <!-- Red takis format -->
     <div class="red-takis-format invisible-bar" id="red-takis-format">
@@ -587,9 +702,7 @@
             <img id="small-size-waves-takis" class="takis-image-format invisible-bar" src="">
             <img id="large-size-waves-takis" class="takis-image-format invisible-bar" src="">
             <div class="bag-size">
-                <button id="small-btn-waves-takis" class="small-btn">Small</button>
                 <button id="medium-btn-waves-takis" class="medium-btn">Normal</button>
-                <button id="large-btn-waves-takis" class="big-btn">Large</button>    
             </div>
         </div>
         <div class="product-description">
@@ -601,6 +714,43 @@
             <div class="form-price"><p class="price-title">Price:</p> <p id="form-price-waves-takis" class="actual-price"> $2.80</p></div>
         </div>
     </div>
+                                                                                    <!-- Slim Jim format -->
+    <div class="red-takis-format invisible-bar" id="slim-jim-format">
+        <div class="close-bar" id="close-bar-slim-jim">✖</div>
+        <div class="product-view">
+            <img id="normal-size-slim-jim" class="takis-image-format" src="/images/71MrLeq3ThL._SL1500_.jpg">
+        </div>
+        <div class="product-description">
+            <h2 class="product-name">Slim Jim</h2>
+            <h3 class="about-product">Description</h3>
+            <p class="description-text">• Slim Jim Original Snack-Sized Smoked Meat Sticks are locked and loaded protein snacks with 7 grams of protein per serving</p>
+            <p class="description-text">• This tasty, jack-of-all-trades snack food goes anywhere</p>
+            <p class="stock">In stock</p>
+            <div class="form-price"><p class="price-title">Price:</p> <p id="form-price-slim-jim" class="actual-price"> $1.75</p></div>
+        </div>
+    </div>
+                                                                                        <!-- Crisps Takis format -->
+    <div class="red-takis-format invisible-bar" id="crisps-takis-format">
+        <div class="close-bar" id="close-bar-crisps-takis">✖</div>
+        <div class="product-view">
+            <img id="normal-size-crisps-takis" class="takis-image-format" src="/images/51TDPgv3KNL._SL1500_ (1).jpg">
+            <img id="small-size-crisps-takis" class="takis-image-format invisible-bar" src="/images/dtqbwev9vdlvrk9pvtdo.png">
+            <div class="bag-size">
+                <button id="small-btn-crisps-takis" class="small-btn">Small</button>
+                <button id="medium-btn-crisps-takis" class="medium-btn">Normal</button>
+            </div>
+        </div>
+        <div class="product-description">
+            <h2 class="product-name">Blue Takis</h2>
+            <h3 class="about-product">Description</h3>
+            <p class="description-text">• These extra-spicy corn chips pack a punch of flavor that will leave your tastebuds begging for more</p>
+            <p class="description-text">• Featuring a distinctive rolled design for extra crunch, and covered in a combination of hot chili pepper and tangy lime seasoning</p>
+            <p class="description-text">• Takis Blue are a fun and flavorful take on traditional tortilla chips</p>
+            <p class="stock">In stock</p>
+            <div class="form-price"><p class="price-title">Price:</p> <p id="form-price-crisps-takis" class="actual-price"> $2.80</p></div>
+        </div>
+    </div>
+
 
     <h1 class="title">Snacks</h1>
     <div class="products">
@@ -636,18 +786,19 @@
             </div>
         </div>
         <div class="takis shop-item">
-            <img class="takis-image shop-item-image" src="/images/71MrLeq3ThL._SL1500_.jpg">
+            <img id="slim-jim" class="takis-image shop-item-image" src="/images/71MrLeq3ThL._SL1500_.jpg">
             <p class="takis-description shop-item-title">Slim Jim</p>
             <div class="price-section shop-item-details">
-                <p class="price shop-item-price">$2.80</p>
+                <p class="price shop-item-price">$1.75</p>
                 <button class="btn-buy btn-buy btn btn-primary shop-item-button" id="btn-buy-waves-takis">ADD TO CART</button>
             </div>
         </div>
         <div class="takis shop-item">
-            <img class="takis-image shop-item-image" src="/images/51TDPgv3KNL._SL1500_ (1).jpg">
+            <img id="crisps-takis" class="takis-image shop-item-image" src="/images/51TDPgv3KNL._SL1500_ (1).jpg">
+            <img id="small-crisps-takis" class="takis-image invisible-bar shop-item-image" src="/images/dtqbwev9vdlvrk9pvtdo.png">
             <p class="crisps-description shop-item-title">Crisps Takis</p>
             <div class="price-section shop-item-details">
-                <p class="price-crisps shop-item-price">$4.00</p>
+                <p id="crisps-takis-price" class="price-crisps shop-item-price">$4.00</p>
                 <button class="btn-buy-pringles btn btn-primary shop-item-button" id="btn-buy-waves-takis">ADD TO CART</button>
             </div>
         </div>
@@ -717,6 +868,8 @@
     const purchaseForm = document.getElementById("purchase-format")
     const closeFormat = document.getElementById("close-bar")
     const purchaseDescription = document.getElementById("purchase-description")
+    const purchaseTermsFormat = document.getElementById("purchase-terms")
+    const purchaseTermsTitle = document.getElementById("title-fields")
 
                                                                                                                 //Red Takis Parts
     const largeSizeRedTakisImage = document.getElementById("large-size-red-takis")
@@ -748,7 +901,7 @@
     const blueTakisPrice = document.getElementById("blue-takis-price")
     const blueTakisFormPrice = document.getElementById("form-price-blue-takis")
 
-                                                                                                                    //Blue Takis Parts
+                                                                                                                    //Waves Takis Parts
     const wavesTakisFormat = document.getElementById("waves-takis-format")
     const closeWavesTakisFormat = document.getElementById("close-bar-waves-takis")
     const normalSizeWavesTakisImage = document.getElementById("normal-size-waves-takis")
@@ -763,12 +916,59 @@
     const wavesTakisPrice = document.getElementById("waves-takis-price")
     const wavesTakisFormPrice = document.getElementById("form-price-waves-takis")
 
+                                                                                                                    //Slim Jim Parts
+    const slimJimFormat = document.getElementById("slim-jim-format")
+    const closeSlimJimFormat = document.getElementById("close-bar-slim-jim")
+    const slimJimPrice = document.getElementById("slim-jim-price")
+    const slimJimFormPrice = document.getElementById("form-price-slim-jim")
+    const slimJim = document.getElementById("slim-jim")
+
+                                                                                                                        //Crisps Takis Parts
+    const crispsTakisFormat = document.getElementById("crisps-takis-format")
+    const closeCrispsTakisFormat = document.getElementById("close-bar-crisps-takis")
+    const normalSizeCrispsTakisImage = document.getElementById("normal-size-crisps-takis")
+    const smallSizeCrispsTakisImage = document.getElementById("small-size-crisps-takis")
+    const largeSizeCrispsTakisImage = document.getElementById("large-size-crisps-takis")
+    const mediumCrispsTakis = document.getElementById("medium-btn-crisps-takis")
+    const largeBtnCrispsTakis = document.getElementById("large-btn-crisps-takis")
+    const smallBtnCrispsTakis = document.getElementById("small-btn-crisps-takis")
+    const smallCrispsTakis = document.getElementById("small-crisps-takis")
+    const largeCrispsTakis = document.getElementById("large-crisps-takis")
+    const crispsTakis = document.getElementById("crisps-takis")
+    const crispsTakisPrice = document.getElementById("crisps-takis-price")
+    const crispsTakisFormPrice = document.getElementById("form-price-crisps-takis")
+
+    const fromName = document.getElementById("fromName")
+    const email = document.getElementById("email")
+    const phoneNumber = document.getElementById("phone")
+
 
     if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
 } else {
     ready()
 }
+
+function sendMail(params){
+    var tempParams = {
+        from_name: document.getElementById("fromName").value,
+        message: document.getElementById("msg").value,
+        email: document.getElementById("email").value,
+        quantity: document.getElementById("quantity-send").value,
+        location:[document.getElementById("country").value,
+                    document.getElementById("city").value,
+                    document.getElementById("street").value,
+                ],
+        zipcode: document.getElementById("zipcode").value,
+        size: document.getElementById("product-size").value,
+        number: document.getElementById("phone").value
+    }
+
+    emailjs.send('service_yjc95sq', 'template_dglp702', tempParams).then(function(res){
+        console.log("success", res.status)
+    })
+}
+
 
 function ready() {
     var removeCartItemButtons = document.getElementsByClassName('btn-danger')
@@ -923,19 +1123,6 @@ function ready() {
         wavesTakisFormat.classList.remove("invisible-bar")
     })    
     
-    smallBtnWavesTakis.addEventListener("click", ()=>{
-        wavesTakisPrice.innerHTML= '$' + 1.25 ;
-        wavesTakisFormPrice.innerHTML = '' + '$' + 1.25
-        largeSizeWavesTakisImage.classList.add("invisible-bar")
-        normalSizeWavesTakisImage.classList.add("invisible-bar")
-        smallSizeWavesTakisImage.classList.remove("invisible-bar")
-        smallWavesTakis.classList.remove("invisible-bar")
-        wavesTakis.classList.add("invisible-bar")
-        wavesTakis.classList.remove("shop-item-image")
-        largeWavesTakis.classList.remove("shop-item-image")
-        largeWavesTakis.classList.add("invisible-bar")
-        smallWavesTakis.classList.add("shop-item-image")
-    })
 
     mediumWavesTakis.addEventListener("click", ()=>{
         largeSizeWavesTakisImage.classList.add("invisible-bar")
@@ -951,20 +1138,53 @@ function ready() {
         smallWavesTakis.classList.remove("shop-item-image")
     })
 
-    largeBtnWavesTakis.addEventListener("click", ()=>{
-        wavesTakisPrice.innerHTML= '$' + 3.25 + '.0';
-        wavesTakisFormPrice.innerHTML = '' + '$' + 3.00 + '.00'
-        largeSizeWavesTakisImage.classList.remove("invisible-bar")
-        normalSizeWavesTakisImage.classList.add("invisible-bar")
-        smallSizeWavesTakisImage.classList.add("invisible-bar")
-        wavesTakis.classList.remove("shop-item-image")
-        smallWavesTakis.classList.remove("shop-item-image")
-        largeWavesTakis.classList.add("shop-item-image")
-        largeWavesTakis.classList.remove("invisible-bar")
-        wavesTakis.classList.add("invisible-bar")
-        smallWavesTakis.classList.add("invisible-bar")
+                                                                                                                    // Slim Jim Events
+    closeSlimJimFormat.addEventListener("click", ()=>{
+        slimJimFormat.classList.add("invisible-bar")
     })
 
+    slimJim.addEventListener("click", ()=>{
+        slimJimFormat.classList.remove("invisible-bar")
+    })
+
+                                                                                                                // Crisps Takis Events
+    closeCrispsTakisFormat.addEventListener("click", ()=>{
+        crispsTakisFormat.classList.add("invisible-bar")
+    })
+
+    crispsTakis.addEventListener("click", ()=>{
+        crispsTakisFormat.classList.remove("invisible-bar")
+    })
+
+    smallCrispsTakis.addEventListener("click", ()=>{
+        crispsTakisFormat.classList.remove("invisible-bar")
+    })
+
+    crispsTakis.addEventListener("click", ()=>{
+        crispsTakisFormat.classList.remove("invisible-bar")
+    })
+
+    smallBtnCrispsTakis.addEventListener("click", ()=>{
+        crispsTakisPrice.innerHTML= '$' + 2.25 + '0';
+        crispsTakisFormPrice.innerHTML = '' + '$' + 1.25
+        normalSizeCrispsTakisImage.classList.add("invisible-bar")
+        smallSizeCrispsTakisImage.classList.remove("invisible-bar")
+        smallCrispsTakis.classList.remove("invisible-bar")
+        crispsTakis.classList.add("invisible-bar")
+        crispsTakis.classList.remove("shop-item-image")
+        smallCrispsTakis.classList.add("shop-item-image")
+    })
+
+    mediumCrispsTakis.addEventListener("click", ()=>{
+        crispsTakisPrice.innerHTML= '$' + 4.25 + '.0';
+        crispsTakisFormPrice.innerHTML = '' + '$' + 4.25 + '0'
+        normalSizeCrispsTakisImage.classList.remove("invisible-bar")
+        smallSizeCrispsTakisImage.classList.add("invisible-bar")
+        smallCrispsTakis.classList.add("invisible-bar")
+        crispsTakis.classList.remove("invisible-bar")
+        crispsTakis.classList.add("shop-item-image")
+        smallCrispsTakis.classList.remove("shop-item-image")
+    })
 
     var quantityInputs = document.getElementsByClassName('cart-quantity-input')
     for (var i = 0; i < quantityInputs.length; i++) {
@@ -981,15 +1201,27 @@ function ready() {
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 }
 
+
     closeFormat.addEventListener("click", ()=>{
         purchaseForm.classList.remove("purchase")
         closeFormat.classList.add("invisible-bar")
+        purchaseTermsFormat.classList.add("invisible-bar")
+        purchaseTermsFormat.classList.remove("purchase-terms")
         purchaseDescription.classList.add("invisible-bar")
+        purchaseTermsTitle.classList.add("invisible-bar")
+        purchaseTermsTitle.classList.remove("title-fields")
     })
 
 function purchaseClicked() {
+    purchaseTermsFormat.classList.remove("invisible-bar")
+    purchaseTermsFormat.classList.add("purchase-terms")
+    purchaseDescription.classList.remove("invisible-bar")
+    purchaseTermsTitle.classList.remove("invisible-bar")
+    purchaseTermsTitle.classList.add("title-fields")
+
     alert('Thank you for your purchase')
     purchaseForm.classList.add("purchase")
+    purchaseForm.classList.remove("invisible-bar")
     closeFormat.classList.remove("invisible-bar")
     purchaseDescription.classList.remove("invisible-bar")
     var cartItems = document.getElementsByClassName('cart-items')[0]
@@ -1057,9 +1289,9 @@ function updateCartTotal() {
     for (var i = 0; i < cartRows.length; i++) {
         var cartRow = cartRows[i]
         var priceElement = cartRow.getElementsByClassName('cart-price')[0]
-        var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
+        const quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
         var price = parseFloat(priceElement.innerText.replace('$', ''))
-        var quantity = quantityElement.value
+        const quantity = quantityElement.value
         total = total + (price * quantity)
     }
     total = Math.round(total * 100) / 100
