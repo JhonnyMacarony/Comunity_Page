@@ -40,6 +40,10 @@ app.get("/store/candies", (req, res) =>{
     res.render("layouts/store/candies/candy-page.ejs")
 })
 
+app.get("/store/mysterybox", (req, res) =>{
+    res.render("layouts/store/mysterybox/mysterybox-page.ejs")
+})
+
 app.set("view engine", "ejs")
 app.set("views", __dirname + '/views')
 app.set('layout', 'layouts/event')

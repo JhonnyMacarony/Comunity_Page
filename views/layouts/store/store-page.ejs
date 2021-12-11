@@ -162,6 +162,39 @@
             margin-top: -26px;
         }
         }
+        .mystery-box{
+            display: flex;
+            flex-direction: column;
+            border: 4px black solid;
+            height: auto;
+            width: 300px;
+            margin-right: 25px;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+        }
+        .mystery-box-image{
+            height: 200px;
+        }
+        .mystery-box-description{
+            padding: 10px 5px 10px 5px;
+            display: flex;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.534);
+            width: 295px;
+            position: absolute;
+            margin-top: 170px;
+        }
+        .mystery-box:hover{
+            border: 4px rgb(46, 46, 46) solid;
+        }
+        .mystery-box-description:hover{
+            padding-top: 15px;
+            margin-bottom: 10px;
+            background-color: rgba(0, 0, 0, 0.637);
+        }
     </style>
 </head>
 <body>
@@ -186,6 +219,10 @@
             <a href="/store/candies"><div class="candies">
                 <img class="candies-image" src="/images/candy+IMG_5872.jpg">
                 <p class="candies-description">A category full of candies</p>
+            </div></a>    
+            <a href="/store/mysterybox"><div class="mystery-box">
+                <img class="mystery-box-image" src="/images/res_f633b00bed90b880fc0a6f6d5bfb792f.webp">
+                <p class="mystery-box-description">A category full of mystery boxes</p>
             </div></a>    
         </div>
     </div>
